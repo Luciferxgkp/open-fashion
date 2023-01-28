@@ -46,7 +46,8 @@ const Styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginHorizontal: 20,
+    backgroundColor: "#E7EAEF",
+    paddingHorizontal: 20,
   },
 });
 export default Header;

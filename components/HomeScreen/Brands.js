@@ -1,11 +1,12 @@
-import { View, Image } from "react-native";
+import { View, Image, TouchableOpacity } from "react-native";
+import { HomeScreenStyles } from "../../Styles";
 
 const Brands = () => {
   return (
     <View style={{ marginTop: 30, height: 250 }}>
       <View style={{ alignItems: "center" }}>
         <Image
-          style={{ width: 120, height: 10 }}
+          style={HomeScreenStyles.Line}
           source={require("../../assets/3.png")}
         />
       </View>
@@ -37,7 +38,7 @@ const Brands = () => {
       </View>
       <View style={{ alignItems: "center" }}>
         <Image
-          style={{ width: 120, height: 10 }}
+          style={HomeScreenStyles.Line}
           source={require("../../assets/3.png")}
         />
       </View>
@@ -46,14 +47,16 @@ const Brands = () => {
 };
 
 const ImageComponent = ({ imgUrl }) => (
-  <Image
-    source={imgUrl}
-    style={{
-      width: 100,
-      height: 100,
-      resizeMode: "contain",
-    }}
-  />
+  <TouchableOpacity>
+    <Image
+      source={imgUrl}
+      style={{
+        width: 100,
+        height: 100,
+        resizeMode: "contain",
+      }}
+    />
+  </TouchableOpacity>
 );
 
 export default Brands;

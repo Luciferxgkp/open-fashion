@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { Text, TouchableOpacity, View, Image } from "react-native";
 import { HomeScreenStyles } from "../../Styles";
-import { currencyFormatter } from "../Helper";
+import ProductCard from "../ProductCard";
 
 const NewArrivals = () => {
   const [activeTab, setActiveTab] = useState("All");
   return (
     <View style={HomeScreenStyles.NewArrival}>
       <View style={HomeScreenStyles.NewArrivalheader}>
-        <Text style={{ fontSize: 18, letterSpacing: 4 }}>NEW ARRIVAL</Text>
+        <Text style={HomeScreenStyles.Header}>NEW ARRIVAL</Text>
         <Image
-          style={{ width: 120, height: 10, marginBottom: 10 }}
+          style={HomeScreenStyles.Line}
           source={require("../../assets/3.png")}
         />
       </View>
@@ -196,30 +196,5 @@ const NewArrivals = () => {
     </View>
   );
 };
-const ProductCard = ({ imgUrl = "", title = "", price = "" }) => (
-  <TouchableOpacity>
-    <View style={HomeScreenStyles.productCard}>
-      <Image
-        source={imgUrl}
-        style={{ height: "80%", width: "100%" }}
-        resizeMode="cover"
-      />
-      <Text
-        style={{
-          fontSize: 12,
-          color: "#333333",
-          marginTop: 5,
-          marginHorizontal: 10,
-          textAlign: "center",
-        }}
-      >
-        {title}
-      </Text>
-      <Text style={{ fontSize: 15, color: "#DD8560", marginTop: 5 }}>
-        {currencyFormatter(parseInt(price))}
-      </Text>
-    </View>
-  </TouchableOpacity>
-);
 
 export default NewArrivals;

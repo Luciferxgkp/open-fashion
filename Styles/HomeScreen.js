@@ -1,6 +1,16 @@
 import { StyleSheet } from "react-native";
 
 const HomeScreenStyles = StyleSheet.create({
+  Header: {
+    fontSize: 18,
+    letterSpacing: 4,
+  },
+  Line: {
+    width: 120,
+    height: 10,
+    marginBottom: 10,
+    marginTop: 10,
+  },
   Banner: {
     height: 700,
     width: "100%",
@@ -43,6 +53,12 @@ const HomeScreenStyles = StyleSheet.create({
     height: 300,
     textAlign: "center",
     alignItems: "center",
+  },
+  Collections: {
+    // height: "fit-content",
+    width: "100%",
+    alignItems: "center",
+    marginTop: 20,
   },
 });
 
